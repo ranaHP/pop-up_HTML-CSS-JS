@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PopUp</title>
+    <!-- for popup css -->
+    <link href="popup.css" rel="stylesheet"/>
+    <!-- for popup script -->
+    <script src="popup.js"  ></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+   
 </head>
 <body>
-    
+    <h1> Popup</h1>
+    <button onclick="popup.showCalenderEnvetPopup([{title: '1 clinic ', desc: ' ABCD' }, {title: '2 clinic ', desc: ' ABCD' }])"> open popup</button>
+    <button onclick="popup.showCalenderEnvetPopup([{title: '3 clinic ', desc: ' ABCD' }, {title: '4 clinic ', desc: ' ABCD' }])"> open popup</button>
+done 
+    <div class="mypopup" id="popup" style="display: none;"></div>
+
+    <script defer>
+        evets = [
+                {
+                    title: "D clinic",
+                    desc: " ABCD ",
+                },
+                
+                {
+                    title: "D clinic",
+                    desc: " ABCD ",
+                },
+                
+                {
+                    title: "E clinic",
+                    desc: " ABCD ",
+                }
+            ];
+        let popup = new SuwasewanaPopup("popup", "Calender Events", "suwasewana message", "" , "calenderEvent" );
+    </script>
+    <script>
+        feather.replace()
+      </script>
 </body>
 </html> 
