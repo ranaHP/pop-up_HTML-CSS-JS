@@ -14,28 +14,12 @@
 </head>
 <body>
     <h1> Popup</h1>
-    <button onclick="popup.showCalenderEnvetPopup([{title: '1 clinic ', desc: ' ABCD' }, {title: '2 clinic ', desc: ' ABCD' }])"> open popup</button>
-    <button onclick="popup.showCalenderEnvetPopup([{title: '3 clinic ', desc: ' ABCD' }, {title: '4 clinic ', desc: ' ABCD' }])"> open popup</button>
-done 
+    <button onclick="popup.showPopup()"> open popup</button>
+    <button onclick="popup.showPatientDetails({ name : 'hansana' , age: 23})"> open popup</button>
+    <!-- <button onclick="popup.showCalenderEnvetPopup([{title: '3 clinic ', desc: ' ABCD' }, {title: '4 clinic ', desc: ' ABCD' }])"> open popup</button> -->
     <div class="mypopup" id="popup" style="display: none;"></div>
 
     <script defer>
-        evets = [
-                {
-                    title: "D clinic",
-                    desc: " ABCD ",
-                },
-                
-                {
-                    title: "D clinic",
-                    desc: " ABCD ",
-                },
-                
-                {
-                    title: "E clinic",
-                    desc: " ABCD ",
-                }
-            ];
         let popup = new SuwasewanaPopup("popup", "Calender Events", "suwasewana message", "" , "calenderEvent" );
     </script>
     <script>

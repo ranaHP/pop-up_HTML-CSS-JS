@@ -37,18 +37,18 @@ class SuwasewanaPopup{
         popup.appendChild(popupIcon);
 
         // title
-        let popupTitle = document.createElement('div');
-        popupTitle.classList.add('popup-title');
-        popupTitle.innerText = this.title;
+        // let popupTitle = document.createElement('div');
+        // popupTitle.classList.add('popup-title');
+        // popupTitle.innerText = this.title;
 
-        popup.appendChild(popupTitle);
+        // popup.appendChild(popupTitle);
 
         // desc
-        let popupDesc = document.createElement('div');
-        popupDesc.classList.add('popup-desc');
-        popupDesc.innerHTML = this.desc;
+        // let popupDesc = document.createElement('div');
+        // popupDesc.classList.add('popup-desc');
+        // popupDesc.innerHTML = this.desc;
 
-        popup.appendChild(popupDesc);
+        // popup.appendChild(popupDesc);
 
         // message
         let popupMessage = document.createElement('div');
@@ -78,6 +78,22 @@ class SuwasewanaPopup{
         this.createCalenderEvent(event);
         this.container.style.display = "block";
     }
+
+    showPatientDetails(data){
+        let eventsContaier = document.createElement('div');
+        console.log(data.name);
+        let eventDiv = document.createElement('div');
+        eventDiv.innerHTML = "<br><h4> Patient Details </h4>";
+        eventDiv.innerHTML += "<h5> Name -  " + data.name + " </h5>";
+        eventDiv.innerHTML += "<h5> Age - " + data.age + " </h5>";
+        eventDiv.classList.add('popup-title');
+        eventsContaier.appendChild(eventDiv);
+        
+        document.getElementById("popupMessageContainer").replaceChildren(eventsContaier);
+        document.getElementById("popupMessageContainer").appendChild(eventsContaier);
+        this.showPopup()
+    }
+
     showPopup(){
         this.container.style.display = "block";
     }
